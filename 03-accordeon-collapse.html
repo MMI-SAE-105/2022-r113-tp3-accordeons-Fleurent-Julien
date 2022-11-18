@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon avec x-collapse</title>
-  </head>
-  <body>
-    <h1>Accordéon avec <code>x-collapse</code></h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accordéon avec x-collapse</title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <h1>Accordéon avec <code>x-collapse</code></h1>
+
+  <div class="accordeon" x-data="{isOpen: false}">
+    <section>
+      <button @click="isOpen = 1">bouton 1</button>
+      <p x-show="isOpen === 1" x-collapse>Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Tempore eveniet eaque itaque
+        aliquam
+        praesentium
+        facere nemo voluptatem eligendi fugit ipsam dicta hic odit voluptates esse adipisci deleniti numquam, fugiat
+        corrupti!</p>
+    </section>
+    <section>
+      <button @click="isOpen = 2">bouton 2</button>
+      <p x-show="isOpen === 2" x-collapse>Atque aliquid amet dolor neque nam
+        reiciendis
+        quaerat modi praesentium, eligendi similique
+        incidunt
+        dignissimos. Officia aliquam molestiae sed, quas sint quod recusandae, commodi hic minus omnis expedita vitae
+        nobis voluptates.</p>
+    </section>
+    <section>
+      <button @click="isOpen = 3">bouton 3</button>
+      <p x-show="isOpen === 3" x-collapse>Ab, consequuntur fuga numquam corrupti
+        eius
+        ratione nulla labore culpa voluptatum ullam
+        debitis
+        nam
+        vitae
+        asperiores cum est sint! Esse ipsam ipsa, illum similique deserunt porro in quam magni reiciendis!</p>
+    </section>
+  </div>
+</body>
+
 </html>
