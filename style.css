@@ -1,10 +1,10 @@
 #accordeon {
     /* pour que les éléments soient alignés horizontalement */
-    align-content: horizontal;
+    display: inline-flex;
     /* pour éviter les marges par défaut */
-    margin: 5px;
+    margin: 0;
     /* pour éviter les "padding" par défaut */
-    padding: 5px;
+    padding: 0;
 }
 
 #accordeon li {
@@ -13,11 +13,11 @@
     /* pour cacher le contenu dépassant de l'élément */
     overflow: hidden;
     /* pour l'animation, transition sur width */
-    transition: width 0.5s;
+    transition: width 0.5s ease-in-out;
     /* couleur de fond #eee */
     background-color: #eee;
     /* pour enlever les puces */
-    list-style: none;
+    list-style-type: none;
     /* pour espacer les éléments, marge de 3px */
     margin: 3px;
     /* pour espacer le contenu, padding de 5px */
@@ -33,11 +33,11 @@
 
 #accordeon li figure {
     /* pour éviter les marges par défaut */
-    margin: 10px;
+    margin: 0;
     /* pour que les éléments soient alignés horizontalement */
-    align-content: horizontal;
+    display: inline-block;
     /* largeur de l'élément intrérieur de 317px (= déplié) */
-    max-width: 317px;
+    width: 317px;
 }
 
 #accordeon li figure figcaption {
@@ -46,15 +46,15 @@
     /* pour espacer le texte, padding de 10px */
     padding: 10px;
     /* pour que les éléments soient alignés verticalement */
-    align-content: vertical;
+    vertical-align: baseline;
     /* espace entre les éléments */
-    align-content: space-between;
+    justify-content: space-between;
 }
 
-/* Sur tous les enfants de figcation */
+/* Sur tous les enfants de figcaption */
 #accordeon li figure figcaption>* {
     /* pour éviter les marges par défaut */
-    margin: 5px;
+    margin: 0;
     /* pour éviter les "padding" par défaut */
-    padding: 5px;
+    padding: 0;
 }
