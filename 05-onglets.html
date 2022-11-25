@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onglets</title>
-  </head>
-  <body>
-    <h1>Onglets</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onglets</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js">
+  </script>
+</head>
+
+<body>
+  <div id="onglets" x-data="{ouvert : 1,}">
+    <ul role="tablist">
+      <li role="tab" @click="ouvert = 1" :class="{'actif':ouvert==1}">Onglet 1</li>
+      <li role="tab" @click="ouvert = 2" :class="{'actif':ouvert==2}">Onglet 2</li>
+      <li role="tab" @click="ouvert = 3" :class="{'actif':ouvert==3}">Onglet 3</li>
+    </ul>
+    <div>
+      <div role="tabpanel" x-show="ouvert === 1">
+        <h1>A propos des accordéons</h1>
+        <img src="img/danger.webp" alt="danger">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam animi minus voluptatum ducimus ipsam
+          dolorum iste, suscipit sit iusto eos, nisi quas aperiam qui impedit quae cumque enim culpa aspernatur.</p>
+      </div>
+      <div role="tabpanel" x-show="ouvert === 2">
+        <h1>Les items de l'accordéon</h1>
+        <img src="img/danger.webp" alt="danger">
+        <p>Maxime perspiciatis eos perferendis earum? Reprehenderit corporis beatae a quia. Minima, quam et culpa fugit
+          debitis nam tenetur, distinctio magnam veritatis, sed dolorem tempore facilis. Nihil deleniti consequatur modi
+          nemo!</p>
+      </div>
+      <div role="tabpanel" x-show="ouvert === 3">
+        <h1>Comment utiliser un accordéon en JavaScript</h1>
+        <img src="img/danger.webp" alt="danger">
+        <p>Maxime, dolores. Culpa dolore aspernatur nisi eius mollitia sapiente praesentium animi corporis non itaque
+          tenetur incidunt harum, vitae vero beatae reprehenderit illum sit porro autem alias officiis voluptatibus
+          deserunt expedita.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

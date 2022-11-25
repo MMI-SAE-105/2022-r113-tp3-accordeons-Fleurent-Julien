@@ -63,3 +63,39 @@
     /* pour éviter les "padding" par défaut */
     padding: 0;
 }
+
+
+
+/* Onglets */
+
+div [role="tab"] {
+    cursor: pointer;
+    padding: 5px;
+    list-style: none;
+    border: 2px solid #464c54;
+    border-radius: 5px;
+    display: inline-flex;
+    transition: all 1s bottom;
+}
+
+div [role="tab"]:hover {
+    background-color: blue;
+}
+
+div [role="tab"].actif {
+    background-color: midnightblue;
+    color: white;
+
+}
+
+
+div [role="tabpanel"] {
+    padding: 0;
+    opacity: 1;
+    position: relative;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+}
